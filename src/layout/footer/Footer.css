@@ -1,0 +1,32 @@
+.section6item {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 16px;
+}
+footer {
+  /* border-top: 1px solid hsla(0, 0%, 100%, 0.1); */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.socialWrapper{
+    line-height: 46px;
+}
+
+
+
+.over--lay--footer{
+  /* background-color: #303242; */
+}
+
+.over--lay--footer.socialWrapper::after {
+  backdrop-filter: saturate(180%) blur(10px);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 60px;
+  content: "";
+}
