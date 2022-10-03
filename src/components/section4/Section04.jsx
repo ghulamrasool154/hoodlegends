@@ -121,7 +121,7 @@ const Section04 = () => {
                   onClick={() => setShowmodal(false)}
                   className="teamOverlayModalCross"
                 >
-                  <i class="fa-solid fa-x"></i>
+                  <i className="fa-solid fa-x"></i>
                 </div>
                 <div className="teamOverlayModalLeft">
                   <img src={tImg} />
@@ -135,7 +135,7 @@ const Section04 = () => {
                     href={tlink}
                     className="teamOverlayModalRight4"
                   >
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i className="fa-brands fa-linkedin"></i>
                   </a>
                 </div>
               </div>

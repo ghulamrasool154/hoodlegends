@@ -20,3 +20,12 @@
 .hider--overla--filter {
   filter: blur(20px);
 }
+
+.dummy--ttile {
+  font-size: 50px;
+  color: #f74a85;
+  font-family: 'Jost';
+  text-transform: capitalize;
+  font-weight: 500;
+  margin: 100px 0;
+}

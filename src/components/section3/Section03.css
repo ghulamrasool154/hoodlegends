@@ -1,5 +1,17 @@
 .section3 {
   padding: 60px 0;
+  position: relative;
+}
+.section3::before {
+  content: "";
+  background-image: url("../../assets/images/dancer.png");
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 540px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: -50px;
 }
 
 .section3text {
@@ -52,8 +64,63 @@
 .section3 div {
   display: inline-block;
 }
+/* .slick-prev::before , 
+.slick-next::before{
+  display: none !important;
+} */
 
+.Sliders {
+  display: none;
+}
+/* .slick-next,
+.slick-prev {
+  border-radius: 50px;
+  background-color: #292a38 !important;
+  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.slick-prev {
+  left: 20px;
+  z-index: 2;
+  transform: rotateZ(180deg);
+}
+.slick-next {
+  right: 20px;
+}
+.slick-next::before,
+.slick-prev::before{
+  /* content: " "; */
+  /* content: url("../../assets/images/caret-down.png"); */
+  /* display: none !important; */
+
+/* }
+.slick-prev {
+  background-image: url("../../assets/images/caret-down.png");
+}
+.slick-next {
+  background-image: url("../../assets/images/caret-down.png");
+} */
 @media screen and (max-width: 767px) {
+  .web_view {
+    display: none !important;
+  }
+  .Sliders {
+    display: block;
+  }
+  .custom--awais--slide {
+    width: 90%;
+    overflow: visible;
+    margin: auto;
+  }
+  /* .Sliders .section3item {
+    width: 93% !important;
+  } */
+  /* .slick-next::before {
+    content: "\f0da" !important;
+  } */
   .section3 div {
     display: block;
   }
@@ -61,6 +128,22 @@
   .section3item {
     width: 100% !important;
     margin: 0;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+  }
+  .section3::before{
+    opacity: 0.5;
+  }
+}
+
+@media screen  and (max-width : 600px){
+  .section3{
+    padding: 30px 0;
+  }
+  .section3itemTitle{
+    font-size: 25px;
+  }
+  .section3itemText{
+    font-size: 15px;
+    font-weight: normal;
   }
 }

@@ -72,7 +72,12 @@ const Header = () => {
               CONNECT WALLET
             </div> */}
             </div>
-            <div className="menu--responsive--section">
+            <div
+              className="menu--responsive--section"
+              style={{
+                marginTop: offset === 0 ? "-25px" : null,
+              }}
+            >
               <img
                 src={responsivemenuicon}
                 alt="responsivemenu"
@@ -90,7 +95,14 @@ const Header = () => {
         }
       >
         <div className="header---section--top">
-          <img src={logo} alt="" className="logo--img" />
+          <NavLink>
+            <img
+              src={logo}
+              alt=""
+              className="logo--img"
+              onClick={handleToggleMenu}
+            />
+          </NavLink>
           <div className="close--menu--button">
             <span>
               <img
@@ -107,12 +119,17 @@ const Header = () => {
               <NavLink
                 to="introduction"
                 className="headerMenuSmallButton headerMenuSmallButtonActive"
+                onClick={handleToggleMenu}
               >
                 INTRODUCTION <span className="spanlinebar"></span>
               </NavLink>
             </li>
             <li>
-              <NavLink to="pitch-deck" className="headerMenuSmallButton">
+              <NavLink
+                to="pitch-deck"
+                className="headerMenuSmallButton"
+                onClick={handleToggleMenu}
+              >
                 PITCH DECK <span className="spanlinebar"></span>
               </NavLink>
             </li>
@@ -120,6 +137,7 @@ const Header = () => {
               <Link
                 to="pre-seed"
                 className="headerMenuBigButton headerMenuBigButton1"
+                onClick={handleToggleMenu}
               >
                 PRE-SEED SALE
               </Link>

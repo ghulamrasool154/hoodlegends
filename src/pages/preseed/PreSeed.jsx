@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./PreSeed.css";
 import clock from "../../assets/images/icon_legend.png";
 import downarrow from "../../assets/images/icon_arrow.png";
 import binance from "../../assets/images/binance.png";
+import ProviderPopup from "../../components/Provider/ProviderPopup";
+import { contentCreate } from "../../context/reducer/UseReducer";
 const PreSeed = () => {
+  const data = useContext(contentCreate);
+  const hanldeProvider = () => {
+    // VALLLAT
+    data.dispatch({
+      type: "VALLLAT",
+    });
+    console.log(data.state.vallatPopoup);
+  };
   return (
     <>
+      {data.state.vallatPopoup && (
+        <ProviderPopup hanldeProvider={hanldeProvider} />
+      )}
       <section className="background_first_sale">
         <section className="join_sale">
           <div className="main_join_sale_wrapper">
@@ -60,7 +73,9 @@ const PreSeed = () => {
                   </div>
                 </div>
                 <div className="fourth_">
-                  <button className="connet_wallet">Connect Wallet</button>
+                  <button className="connet_wallet" onClick={hanldeProvider}>
+                    Connect Wallet
+                  </button>
                 </div>
               </div>
               <div className="third_section_right_side">

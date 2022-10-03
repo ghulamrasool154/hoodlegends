@@ -2,6 +2,7 @@ import { useReducer, createContext } from "react";
 
 const initialState = {
   menuToggle: false,
+  vallatPopoup: false,
 };
 
 export const contentCreate = createContext();
@@ -9,7 +10,13 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "TOGGLE":
       return {
+        ...state,
         menuToggle: !state.menuToggle,
+      };
+    case "VALLLAT":
+      return {
+        ...state,
+        vallatPopoup: !state.vallatPopoup,
       };
 
     default:

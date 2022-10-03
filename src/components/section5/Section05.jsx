@@ -29,7 +29,7 @@ const Section05 = () => {
             Web 3.0 accessible to all.
           </div>
 
-          <div class="section5masterWrapper">
+          <div className="section5masterWrapper">
             <div className="section5outer">
               <div
                 style={{ transform: `translateX(${path}px)` }}
@@ -38,129 +38,141 @@ const Section05 = () => {
                 <div className="section5item">
                   <div className="section5itemTitle">Q4 2022</div>
                   <div className="section5itemLine section5itemLineDone">
-                    <i class="fa-solid fa-circle-check"></i> Preliminary Team
-                    Formation
+                    <i className="fa-solid fa-circle-check"></i> Preliminary
+                    Team Formation
                   </div>
                   <div className="section5itemLine section5itemLineDone">
-                    <i class="fa-solid fa-circle-check"></i> Initial Concepts
+                    <i className="fa-solid fa-circle-check"></i> Initial
+                    Concepts
                   </div>
                   <div className="section5itemLine section5itemLineDone">
-                    <i class="fa-solid fa-circle-check"></i> Preliminary Market
-                    Research
+                    <i className="fa-solid fa-circle-check"></i> Preliminary
+                    Market Research
                   </div>
                   <div className="section5itemLine section5itemLineNow">
-                    <i class="fa-solid fa-circle-dot"></i> Pre-Seed Round
+                    <i className="fa-solid fa-circle-dot"></i> Pre-Seed Round
                   </div>
                   <div className="section5itemLine section5itemLineNow">
-                    <i class="fa-solid fa-circle-dot"></i> Economic Research
+                    <i className="fa-solid fa-circle-dot"></i> Economic Research
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Tokenomics
+                    <i className="fa-regular fa-circle"></i> Tokenomics
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Whitepaper
+                    <i className="fa-regular fa-circle"></i> Whitepaper
                   </div>
                 </div>
 
                 <div className="section5item">
                   <div className="section5itemTitle">Q1 2023</div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Application Wireframes
+                    <i className="fa-regular fa-circle"></i> Application
+                    Wireframes
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Application Development
+                    <i className="fa-regular fa-circle"></i> Application
+                    Development
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Website Development
+                    <i className="fa-regular fa-circle"></i> Website Development
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Marketing Exploration
+                    <i className="fa-regular fa-circle"></i> Marketing
+                    Exploration
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Seed / Private Round
+                    <i className="fa-regular fa-circle"></i> Seed / Private
+                    Round
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Deploy Smart Contracts
+                    <i className="fa-regular fa-circle"></i> Deploy Smart
+                    Contracts
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Security Audit
+                    <i className="fa-regular fa-circle"></i> Security Audit
                   </div>
                 </div>
 
                 <div className="section5item">
                   <div className="section5itemTitle">Q2 2023</div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Continued Development
+                    <i className="fa-regular fa-circle"></i> Continued
+                    Development
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Media Partnerships
+                    <i className="fa-regular fa-circle"></i> Media Partnerships
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Influencer Engagement
+                    <i className="fa-regular fa-circle"></i> Influencer
+                    Engagement
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Preliminary Marketing
+                    <i className="fa-regular fa-circle"></i> Preliminary
+                    Marketing
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Presale A & B
+                    <i className="fa-regular fa-circle"></i> Presale A & B
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Legal Advice
+                    <i className="fa-regular fa-circle"></i> Legal Advice
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Progress Analysis
+                    <i className="fa-regular fa-circle"></i> Progress Analysis
                   </div>
                 </div>
 
                 <div className="section5item">
                   <div className="section5itemTitle">Q3 2023</div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i>Alpha Testing
+                    <i className="fa-regular fa-circle"></i>Alpha Testing
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Hood Legends Trailer
+                    <i className="fa-regular fa-circle"></i> Hood Legends
+                    Trailer
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Initiate Marketing
+                    <i className="fa-regular fa-circle"></i> Initiate Marketing
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Launchpads
+                    <i className="fa-regular fa-circle"></i> Launchpads
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Token Generation Event
+                    <i className="fa-regular fa-circle"></i> Token Generation
+                    Event
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Holders Incentive
+                    <i className="fa-regular fa-circle"></i> Holders Incentive
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> CEX Listing
+                    <i className="fa-regular fa-circle"></i> CEX Listing
                   </div>
                 </div>
 
                 <div className="section5item">
                   <div className="section5itemTitle">Q4 2023</div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Closed Beta
+                    <i className="fa-regular fa-circle"></i> Closed Beta
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Continued Marketing
+                    <i className="fa-regular fa-circle"></i> Continued Marketing
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Launch & Growth
+                    <i className="fa-regular fa-circle"></i> Launch & Growth
                     Strategy
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Marketplace Development
+                    <i className="fa-regular fa-circle"></i> Marketplace
+                    Development
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Marketplace
+                    <i className="fa-regular fa-circle"></i> Marketplace
                     Partnerships
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Secondary Audits
+                    <i className="fa-regular fa-circle"></i> Secondary Audits
                   </div>
                   <div className="section5itemLine">
-                    <i class="fa-regular fa-circle"></i> Progress & Growth
+                    <i className="fa-regular fa-circle"></i> Progress & Growth
                     Analysis
                   </div>
                 </div>
@@ -172,7 +184,7 @@ const Section05 = () => {
                 <div className="section5overlayLeft">
                   <i
                     onClick={() => moveRoad("left")}
-                    class="fa-solid fa-caret-left"
+                    className="fa-solid fa-caret-left"
                   ></i>
                 </div>
               )}
@@ -181,7 +193,7 @@ const Section05 = () => {
                 <div className="section5overlayRight">
                   <i
                     onClick={() => moveRoad("right")}
-                    class="fa-solid fa-caret-right"
+                    className="fa-solid fa-caret-right"
                   ></i>
                 </div>
               )}
@@ -190,13 +202,13 @@ const Section05 = () => {
 
           <div className="section5legend">
             <div className="section5legendItem section5legendItem1">
-              <i class="fa-solid fa-circle-check"></i> Completed
+              <i className="fa-solid fa-circle-check"></i> Completed
             </div>
             <div className="section5legendItem section5legendItem2">
-              <i class="fa-solid fa-circle-dot"></i> In-Progress
+              <i className="fa-solid fa-circle-dot"></i> In-Progress
             </div>
             <div className="section5legendItem section5legendItem3">
-              <i class="fa-regular fa-circle"></i> Incomplete
+              <i className="fa-regular fa-circle"></i> Incomplete
             </div>
           </div>
         </div>

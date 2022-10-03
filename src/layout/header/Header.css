@@ -21,7 +21,8 @@
   position: relative;
 }
 header {
-  position: fixed;
+  /* position: fixed; */
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -136,6 +137,7 @@ a.headerMenuSmallButton:hover .spanlinebar::before {
 }
 .headerLogo.header--logo--sticky img {
   max-width: 100%;
+  transition: 0.3s;
 }
 
 /* .headerLogo {
@@ -154,6 +156,62 @@ a.headerMenuSmallButton:hover .spanlinebar::before {
 .menu--responsive--section {
   display: none;
 }
+/* mobile menu responsive thing */
+
+.responsive--menu {
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+  visibility: visible;
+  backdrop-filter: blur(90px);
+  transform: translateY(0);
+  transform-origin: top;
+  transition: 0.5s all;
+}
+
+.responsive--menu.hidden {
+  visibility: hidden;
+  /* display: none; */
+  transform: translateY(-100vh);
+  transform-origin: top;
+  transition: 0.5s all;
+
+}
+.responsive--menu .header---section--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header---section--top img.logo--img {
+  width: 180px;
+  max-width: 100%;
+}
+.header---section--top .close--menu--button img {
+  width: 25px;
+  max-width: 100%;
+}
+
+.header---section--top .close--menu--button {
+  margin-top: -25px;
+}
+.mobile--resposive ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  text-align: left;
+}
+
+.responsive--menu .mobile--resposive {
+  margin-top: 60px;
+}
+
+/* mobile resposnive settubg */
 @media screen and (max-width: 1200px) {
   .headerMenuBigButton {
     min-width: 150px;
@@ -173,7 +231,7 @@ a.headerMenuSmallButton:hover .spanlinebar::before {
   }
   .headerMenuBigButton,
   .headerMenuSmallButton {
-    font-size: 16px;
+    font-size: 20px;
   }
   .headerMenu {
     display: none;
@@ -184,6 +242,27 @@ a.headerMenuSmallButton:hover .spanlinebar::before {
   }
   .headerLogo {
     width: 200px;
+  }
+  .headerMenuBigButton,
+  .headerMenuSmallButton {
+    margin-left: 0;
+  }
+  .mobile--resposive ul li {
+    padding-bottom: 20px;
+  }
+  .headerMenuSmallButton.active {
+    text-underline-offset: 15px;
+  }
+  .spanlinebar::before {
+    top: calc(100% + 8px);
+  }
+  .headerMenuBigButton {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 50px;
+    height: 50px;
   }
 }
 
@@ -210,69 +289,8 @@ a.headerMenuSmallButton:hover .spanlinebar::before {
   .headerLogo.header--logo--sticky {
     width: 150px;
   }
-  a.headerMenuSmallButton {
-    margin-bottom: 15px;
-    display: inline-block;
-  }
-  .header .headerMenuSmallButton:nth-child(1) {
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 400px) {
-  a.headerMenuSmallButton {
-    margin-bottom: 5px;
-  }
-  .header .headerMenuBigButton1 {
-    margin-bottom: 15px;
-  }
-  .headerMenuBigButton1,
-  .headerMenuBigButton2 {
-    margin-left: 10px;
-  }
 }
 
-.responsive--menu {
-  padding: 30px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  overflow: hidden;
-  visibility: visible;
-  backdrop-filter: blur(90px);
-  transform: translateY(0);
-  transform-origin: top;
-  transition: 0.3s all;
-}
-
-.responsive--menu.hidden {
-  visibility: hidden;
-  /* display: none; */
-  transform: translateY(-100vh);
-  transform-origin: top;
-}
-.responsive--menu .header---section--top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.header---section--top img.logo--img {
-  width: 180px;
-  max-width: 100%;
-}
-.header---section--top .close--menu--button img {
-  width: 25px;
-  max-width: 100%;
-}
-
-.header---section--top .close--menu--button {
-  margin-top: -25px;
-}
-.mobile--resposive ul {
-  padding: 0;
-  list-style: none;
-  margin: 0;
-}
+/* .headerMenuSmallButton{
+  margin-left: 0;
+} */

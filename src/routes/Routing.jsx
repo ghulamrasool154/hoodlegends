@@ -6,7 +6,15 @@ const Routing = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pre-seed" element={<PreSeed />} />
+        <Route path="pre-seed" element={<PreSeed />} />
+        <Route
+          path="pitch-deck"
+          element={<h1 className="dummy--ttile">pitch deck Page</h1>}
+        />
+        <Route
+          path="introduction"
+          element={<h1 className="dummy--ttile">Introduction Page</h1>}
+        />
       </Routes>
     </>
   );
