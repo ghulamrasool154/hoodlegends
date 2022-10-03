@@ -9,24 +9,23 @@ footer {
   bottom: 0;
   width: 100%;
 }
-.socialWrapper{
-    line-height: 46px;
+.socialWrapper {
+  line-height: 46px;
 }
 
-
-
-.over--lay--footer{
+.over--lay--footer {
   /* background-color: #303242; */
 }
 
 .over--lay--footer.socialWrapper::after {
-  backdrop-filter: saturate(180%) blur(10px);
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
   width: 100%;
-  height: 60px;
+  height: 46px;
   content: "";
+  background-color: #3032428c;
+  backdrop-filter: saturate(180%) blur(10px);
 }

@@ -3,12 +3,12 @@ import "./Header.css";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/images/headerLogo.png";
 import { contentCreate } from "../../context/reducer/UseReducer";
-
+import responsivemenuicon from "../../assets/images/responsive-menu.svg";
+import responsivemenuclose from "../../assets/images/responsive-colse.svg";
 const Header = () => {
   const [offset, setOffset] = useState(0);
   const data = useContext(contentCreate);
 
-  console.log("data", data.state.menuToggle);
   useEffect(() => {
     const onScroll = () => setOffset(window.pageYOffset);
     // clean up code
@@ -17,38 +17,49 @@ const Header = () => {
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleToggleMenu = () => {
+    data.dispatch({ type: "TOGGLE" });
+  };
   return (
-    <header className={offset === 0 ? "newHeader " : "newHeader newHeaderTra"}>
-      <div className="headerWrapper">
-        <div className="header">
-          <NavLink
-            to="/"
-            className="headerLogo"
-            // style={{
-            //   width: offset === 0 ? "220px" : "180px",
-            // }}
+    <>
+      <header
+        className={offset === 0 ? "newHeader " : "newHeader newHeaderTra"}
+      >
+        <div className="headerWrapper">
+          <div
+            className="header"
+            style={{
+              paddingTop: offset === 0 ? "20px " : "0",
+            }}
           >
-            <img src={logo} alt="" />
-          </NavLink>
-          <div className="headerMenu">
-            <NavLink
-              to="introduction"
-              className="headerMenuSmallButton headerMenuSmallButtonActive"
-            >
-              INTRODUCTION
-            </NavLink>
-
-            <NavLink to="pitch-deck" className="headerMenuSmallButton">
-              PITCH DECK
-            </NavLink>
-
             <Link
-              to="pre-seed"
-              className="headerMenuBigButton headerMenuBigButton1"
+              to="/"
+              className={
+                offset === 0 ? "headerLogo" : "headerLogo header--logo--sticky"
+              }
             >
-              PRE-SEED
+              <img src={logo} alt="" />
             </Link>
-            <div
+            <div className="headerMenu">
+              <NavLink
+                to="introduction"
+                className="headerMenuSmallButton headerMenuSmallButtonActive"
+              >
+                INTRODUCTION <span className="spanlinebar"></span>
+              </NavLink>
+
+              <NavLink to="pitch-deck" className="headerMenuSmallButton">
+                PITCH DECK <span className="spanlinebar"></span>
+              </NavLink>
+
+              <Link
+                to="pre-seed"
+                className="headerMenuBigButton headerMenuBigButton1"
+              >
+                PRE-SEED SALE
+              </Link>
+              {/* <div
               to="connect-wallet"
               className="headerMenuBigButton headerMenuBigButton2"
               onClick={() => {
@@ -56,14 +67,67 @@ const Header = () => {
               }}
             >
               CONNECT WALLET
-            </div>
-            {/* <div className="headerMenuBigButton headerMenuBigButton2">
+            </div> */}
+              {/* <div className="headerMenuBigButton headerMenuBigButton2">
               CONNECT WALLET
             </div> */}
+            </div>
+            <div className="menu--responsive--section">
+              <img
+                src={responsivemenuicon}
+                alt="responsivemenu"
+                onClick={handleToggleMenu}
+              />
+            </div>
           </div>
         </div>
+      </header>
+      <div
+        className={
+          data.state.menuToggle
+            ? "responsive--menu "
+            : " responsive--menu hidden "
+        }
+      >
+        <div className="header---section--top">
+          <img src={logo} alt="" className="logo--img" />
+          <div className="close--menu--button">
+            <span>
+              <img
+                src={responsivemenuclose}
+                alt=""
+                onClick={handleToggleMenu}
+              />
+            </span>
+          </div>
+        </div>
+        <div className="mobile--resposive">
+          <ul>
+            <li>
+              <NavLink
+                to="introduction"
+                className="headerMenuSmallButton headerMenuSmallButtonActive"
+              >
+                INTRODUCTION <span className="spanlinebar"></span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="pitch-deck" className="headerMenuSmallButton">
+                PITCH DECK <span className="spanlinebar"></span>
+              </NavLink>
+            </li>
+            <li>
+              <Link
+                to="pre-seed"
+                className="headerMenuBigButton headerMenuBigButton1"
+              >
+                PRE-SEED SALE
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </>
   );
 };
 

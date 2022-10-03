@@ -1,0 +1,300 @@
+.section4 {
+    padding: 60px 0;
+}
+
+.section4itemsWrapper {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.section4itemsWrapperSecond {
+    margin-top: 0;
+}
+
+.teamSpacer {
+    width: 100%;
+}
+
+.section4item {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    width: 210px;
+    height: 330px;
+    background-color: #292c3a;
+    border-radius: 6px;
+    border: 1px solid #414350;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.section4item:hover {
+    transform: scale(1.05);
+}
+
+.section4itemName {
+    padding: 0 14px;
+    text-align: left;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 32px;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+.section4itemHint {
+    padding: 0 14px;
+    text-align: left;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 12px;
+
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+.section4itemImage {
+    width: 100%;
+    height: 262px;
+
+    overflow: hidden;
+}
+
+.section4itemImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.section4itemsWrapper {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.section4itemsWrapperSecond {
+    margin-top: 0;
+}
+
+.section4 div {
+    display: inline-block;
+}
+
+.teamOverlay {
+    position: relative;
+    z-index: 99999;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    animation: teamModal 0.3s ease-in;
+}
+
+@keyframes teamModal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes teamWindow {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.teamOverlayModal {
+    z-index: 99999999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #535f99;
+    width: 95%;
+    max-width: 950px;
+    padding: 60px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #231b3c, #1c2543);
+    box-shadow: inset 0px 0px 70px 0px #231b3c;
+    animation: teamWindow 0.3s ease-in;
+}
+
+.teamOverlayModalLeft {
+    cursor: default;
+    vertical-align: top;
+    border-radius: 10px;
+    width: 240px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.teamOverlayModalLeft img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.teamOverlayModalRight {
+    cursor: default;
+    padding: 40px;
+    vertical-align: top;
+
+    width: calc(100% - 240px);
+}
+
+.teamOverlayModalRight1 {
+    text-align: left;
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Jost", sans-serif;
+}
+
+.teamOverlayModalRight2 {
+    text-align: left;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.teamOverlayModalRight3 {
+    margin-top: 18px;
+    text-align: left;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.teamOverlayModalRight4 {
+    margin-top: 20px;
+    display: inline-block;
+    user-select: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    color: white;
+    font-size: 34px;
+    line-height: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.teamOverlayModalCross {
+    user-select: none;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    line-height: 36px;
+    position: absolute;
+    right: 60px;
+    top: 46px;
+    background-color: #313a50;
+    border: 1px solid #787e8c;
+    font-size: 14px;
+    color: white;
+}
+
+.socialWrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+}
+
+.teamOverlayOuter {
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #30324287;
+}
+
+.teamOverlayModal div {
+    display: inline-block;
+}
+
+@media screen and (max-width: 1200px) {
+    .section4 {
+        padding: 0 0;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .teamOverlayModalLeft {
+        text-align: left;
+        width: 100%;
+        max-width: 200px;
+        height: 280px;
+    }
+
+    .teamOverlayModalRight {
+        margin-top: 20px;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .teamOverlayModal {
+        width: calc(100vw - 40px);
+    }
+
+    .teamOverlayModalRight1,
+    .teamOverlayModalRight2,
+    .teamOverlayModalRight3,
+    .teamOverlayModalRight4 {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .teamOverlayModal {
+        text-align: left;
+        overflow-y: scroll;
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+
+    .teamOverlayModalCross {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .teamOverlayModal {
+        padding: 30px;
+    }
+
+    .teamOverlayModalCross {
+        right: 20px;
+    }
+}
