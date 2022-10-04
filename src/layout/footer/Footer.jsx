@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <>
       <Section06 />
-      {/* <footer
+       <footer
         className={
           document.body.scrollHeight <= offset + window.innerHeight
             ? "over--lay--footer--hidden"
@@ -75,7 +75,7 @@ const Footer = () => {
             <i className="fa-brands fa-medium"></i>
           </a>
         </div>
-      </footer> */}
+      </footer> 
     </>
   );
 };

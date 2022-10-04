@@ -208,8 +208,9 @@
 
 @media screen and (max-width: 500px) {
   .section5legendItem {
-    width: 100%;
-    margin: 10px 0;
+    /* width: 100%; */
+    margin: 10px 5px;
+    font-size: 12px;
   }
   .section5itemTitle {
     font-size: 35px;

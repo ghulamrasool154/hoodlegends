@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Section04.css";
+import Slider from "react-slick";
 import t1 from "../../assets/images/t1.png";
 import t2 from "../../assets/images/t2.png";
 import t3 from "../../assets/images/t3.png";
@@ -106,6 +107,33 @@ const Section04 = () => {
     }
     setShowmodal(true);
   };
+  const settings = {
+    className: "center",
+    dots: true,
+    centerMode: false,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 1,
+    speed: 500,
+    rows: 1,
+    slidesPerRow: 2,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesPerRow: 2,
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 530,
+        settings: {
+          slidesPerRow: 1,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
@@ -121,7 +149,7 @@ const Section04 = () => {
                   onClick={() => setShowmodal(false)}
                   className="teamOverlayModalCross"
                 >
-                  <i className="fa-solid fa-x"></i>
+                  <i class="fa-solid fa-x"></i>
                 </div>
                 <div className="teamOverlayModalLeft">
                   <img src={tImg} />
@@ -135,7 +163,7 @@ const Section04 = () => {
                     href={tlink}
                     className="teamOverlayModalRight4"
                   >
-                    <i className="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-linkedin"></i>
                   </a>
                 </div>
               </div>
@@ -156,7 +184,7 @@ const Section04 = () => {
               make Web 3.0 accessible to all.
             </div>
 
-            <div className="section4itemsWrapper">
+            <div className="section4itemsWrapper web__view">
               <div onClick={() => setTeam(0)} className="section4item">
                 <div className="section4itemImage section4itemImage1">
                   <img src={t1} />
@@ -232,6 +260,76 @@ const Section04 = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="team_slider">
+        <div>
+          <Slider {...settings}>
+            <div className="inner_slider">
+              <div onClick={() => setTeam(0)} className="section4item">
+                <div className="section4itemImage section4itemImage1">
+                  <img src={t1} />
+                </div>
+                <div className="section4itemName">HARIS HUSSAIN</div>
+                <div className="section4itemHint">FOUNDER & CEO</div>
+              </div>
+              <div onClick={() => setTeam(2)} className="section4item">
+                <div className="section4itemImage section4itemImage3">
+                  <img src={t3} />
+                </div>
+                <div className="section4itemName">ASLIHAN SARIGÜL</div>
+                <div className="section4itemHint">CONCEPT DEVELOPER</div>
+              </div>
+            </div>
+            <div className="inner_slider">
+              <div onClick={() => setTeam(3)} className="section4item">
+                <div className="section4itemImage section4itemImage4">
+                  <img src={t4} />
+                </div>
+                <div className="section4itemName">DAVID TUNOLD</div>
+                <div className="section4itemHint">TALENT MANAGER</div>
+              </div>
+              <div onClick={() => setTeam(4)} className="section4item">
+                <div className="section4itemImage section4itemImage5">
+                  <img src={t5} />
+                </div>
+                <div className="section4itemName">MOHSIN BASHIR</div>
+                <div className="section4itemHint">ACCOUNTS & FINANCE</div>
+              </div>
+            </div>
+            <div className="inner_slider">
+              <div onClick={() => setTeam(5)} className="section4item">
+                <div className="section4itemImage section4itemImage6">
+                  <img src={t6} />
+                </div>
+                <div className="section4itemName">JAMES OOI</div>
+                <div className="section4itemHint">COMMUNITY MANAGER</div>
+              </div>
+              <div onClick={() => setTeam(6)} className="section4item">
+                <div className="section4itemImage section4itemImage7">
+                  <img src={t7} />
+                </div>
+                <div className="section4itemName">SHRUTI KOHLI</div>
+                <div className="section4itemHint">PARTNERSHIP ADVISOR</div>
+              </div>
+            </div>
+            <div className="inner_slider">
+              <div onClick={() => setTeam(7)} className="section4item">
+                <div className="section4itemImage section4itemImage8">
+                  <img src={t8} />
+                </div>
+                <div className="section4itemName">KARIN VERI</div>
+                <div className="section4itemHint">PARTNERSHIP ADVISOR</div>
+              </div>
+              <div onClick={() => setTeam(8)} className="section4item">
+                <div className="section4itemImage section4itemImage9">
+                  <img src={t9} />
+                </div>
+                <div className="section4itemName">VALERIE LEROY</div>
+                <div className="section4itemHint">BUSINESS ADVISOR</div>
+              </div>
+            </div>
+          </Slider>
         </div>
       </div>
     </>

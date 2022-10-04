@@ -240,6 +240,10 @@
     display: inline-block;
 }
 
+.team_slider {
+    display: none;
+}
+
 @media screen and (max-width: 1200px) {
     .section4 {
         padding: 0 0;
@@ -248,6 +252,30 @@
 
 
 @media screen and (max-width: 767px) {
+    .web__view{
+        display: none !important;
+    }
+    .team_slider  .slick-next {
+        right: 50px;
+    }
+    .team_slider {
+        display: block;
+        margin-top: 20px;
+    }
+    .team_slider    .slick-prev {
+       left: 45px;
+    }
+    .team_slider .section4item {
+
+        margin-left: 50px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .inner_slider {
+        width: 41% !important;
+        display: inline-block;
+    }
+
     .teamOverlayModalLeft {
         text-align: left;
         width: 100%;
@@ -275,6 +303,14 @@
 }
 
 @media screen and (max-width: 715px) {
+    .team_slider .section4item {
+        margin-left: 38px !important;
+        margin-bottom: 15px !important;
+    }
+    /* .inner_slider {
+        width: 45% !important;
+     
+    } */
     .teamOverlayModal {
         text-align: left;
         overflow-y: scroll;
@@ -288,13 +324,58 @@
         text-align: center;
     }
 }
+@media screen and (max-width: 670px) {
+    .team_slider  .slick-next {
+        right: 30px;
+    }
+    .team_slider .section4item {
+        margin-left: 26px !important;
+        margin-bottom: 15px !important;
+    }
+}
+@media screen and (max-width: 570px) {
 
+}
+@media screen and (max-width: 530px) {
+    .team_slider .section4item {
+        margin-left: 0px !important;
+    }
+}
 @media screen and (max-width: 500px) {
+    .team_slider .section4item {
+        margin-left: 140px !important;
+        margin-bottom: 15px !important;
+    }
     .teamOverlayModal {
         padding: 30px;
     }
 
     .teamOverlayModalCross {
         right: 20px;
+    }
+
+    .inner_slider {
+        width: 100% !important;
+        display: initial !important;
+    }
+
+    .team_slider .section4item {
+        width: 44%;
+        /* width: 54%;
+       height: 325px; */
+    }
+
+    .team_slider .inner_slider {
+        width: 60% !important;
+        display: initial;
+    }
+}
+@media screen and (max-width: 450px) {
+    .team_slider  .slick-next {
+        right: 30px !important ;
+    }
+    .team_slider .section4item {
+        margin-left: 124px !important;
+        margin-bottom: 15px !important;
     }
 }

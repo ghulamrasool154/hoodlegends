@@ -15,8 +15,14 @@ footer {
 
 .over--lay--footer {
   /* background-color: #303242; */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: auto;
 }
-
+footer.over--lay--footer--hidden {
+  display: none;
+}
 .over--lay--footer.socialWrapper::after {
   position: absolute;
   left: 0;

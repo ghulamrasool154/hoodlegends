@@ -26,7 +26,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .headerWrapper {
@@ -168,10 +168,11 @@ a.headerMenuSmallButton:hover .spanlinebar::before {
   z-index: 100;
   overflow: hidden;
   visibility: visible;
-  backdrop-filter: blur(90px);
+  backdrop-filter: blur(20px);
   transform: translateY(0);
   transform-origin: top;
-  transition: 0.5s all;
+  transition: 1s all;
+  background-color:#292c3935;
 }
 
 .responsive--menu.hidden {
@@ -179,7 +180,7 @@ a.headerMenuSmallButton:hover .spanlinebar::before {
   /* display: none; */
   transform: translateY(-100vh);
   transform-origin: top;
-  transition: 0.5s all;
+  transition: 1s all;
 
 }
 .responsive--menu .header---section--top {
