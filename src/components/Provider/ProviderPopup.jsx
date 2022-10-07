@@ -6,7 +6,7 @@ const ProviderPopup = ({ hanldeProvider }) => {
   return (
     <>
       {/* "react-router-dom": "^5.2.0", */}
-      <div className="ProviderPopup---option--overlay"></div>
+      {/* <div className="ProviderPopup---option--overlay"></div> */}
       <div className="ProviderPopup---option">
         <div className="ProviderPopup">
           <span
@@ -32,7 +32,7 @@ const ProviderPopup = ({ hanldeProvider }) => {
               <p>Scan with WalletConnect to connect</p>
             </div>
           </div>
-          <div className="provider--companies---overlay"></div>
+          {/* <div className="provider--companies---overlay"></div> */}
         </div>
       </div>
     </>

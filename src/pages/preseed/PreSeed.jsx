@@ -5,6 +5,7 @@ import downarrow from "../../assets/images/icon_arrow.png";
 import binance from "../../assets/images/binance.png";
 import ProviderPopup from "../../components/Provider/ProviderPopup";
 import { contentCreate } from "../../context/reducer/UseReducer";
+import { Link } from "react-router-dom";
 const PreSeed = () => {
   const data = useContext(contentCreate);
   const hanldeProvider = () => {
@@ -106,16 +107,18 @@ const PreSeed = () => {
                 </div>
               </div>
             </div>
-            <div className="container">
+            {/* <div className="container">
               <div className="skills html"></div>
               <div className="user_amount">
                 <p>550,035 / 1,000,000 $LEGEND</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
         <div className="back_arrow">
-          <i className="fa-sharp fa-solid fa-arrow-left"></i>
+          <Link to="/">
+            <i className="fa-sharp fa-solid fa-arrow-left"></i>
+          </Link>
         </div>
       </section>
     </>

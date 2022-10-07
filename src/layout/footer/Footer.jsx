@@ -10,26 +10,31 @@ const Footer = () => {
       : "section6item ";
 
   useEffect(() => {
+    console.log(window.innerHeight, "innerheight");
+    console.log(document.body.scrollHeight, "scroll hight");
+    console.log(document.body.scrollHeight < offset + window.innerHeight + 200);
+    console.log(offset + 10, "ofset");
     const onScroll = () => setOffset(window.pageYOffset);
     // clean up code
     window.removeEventListener("scroll", onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [offset]);
+
   return (
     <>
       <Section06 />
-       <footer
+      <footer
         className={
-          document.body.scrollHeight <= offset + window.innerHeight
+          document.body.scrollHeight <= offset + window.innerHeight + "200px"
             ? "over--lay--footer--hidden"
             : "over--lay--footer"
         }
       >
         <div
           className={
-            document.body.scrollHeight <= offset + window.innerHeight
+            document.body.scrollHeight < offset + window.innerHeight + 160
               ? "socialWrapper"
               : "socialWrapper over--lay--footer "
           }
@@ -75,7 +80,7 @@ const Footer = () => {
             <i className="fa-brands fa-medium"></i>
           </a>
         </div>
-      </footer> 
+      </footer>
     </>
   );
 };

@@ -43,7 +43,7 @@ const Header = () => {
             </Link>
             <div className="headerMenu">
               <NavLink
-                to="introduction"
+                to="/"
                 className="headerMenuSmallButton headerMenuSmallButtonActive"
               >
                 INTRODUCTION <span className="spanlinebar"></span>
