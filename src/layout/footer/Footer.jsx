@@ -10,10 +10,7 @@ const Footer = () => {
       : "section6item ";
 
   useEffect(() => {
-    console.log(window.innerHeight, "innerheight");
-    console.log(document.body.scrollHeight, "scroll hight");
-    console.log(document.body.scrollHeight < offset + window.innerHeight + 200);
-    console.log(offset + 10, "ofset");
+
     const onScroll = () => setOffset(window.pageYOffset);
     // clean up code
     window.removeEventListener("scroll", onScroll);

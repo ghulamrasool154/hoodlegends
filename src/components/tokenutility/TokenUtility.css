@@ -1,0 +1,162 @@
+section.TokenUtility--page {
+  visibility: hidden;
+  transform: translateX(-100vw);
+  transition: 1s;
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  transform-origin: left;
+}
+
+section.TokenUtility--page.--animtion {
+  visibility: visible;
+  transform: translateX(0);
+  z-index: 35;
+  position: fixed;
+  inset: 0;
+  transition: 1s;
+  transform-origin: left;
+}
+
+section.TokenUtility--page .container-fluid {
+  /* background: linear-gradient(45deg, #241c3c, #1b2d46); */
+  background: linear-gradient(
+    90deg,
+    rgba(30, 34, 63, 1) 0%,
+    rgba(26, 51, 72, 1) 100%
+  );
+
+  border: 1px solid #5e6aa6;
+  border-radius: 15px;
+  width: 65%;
+  padding: 55px;
+  margin: 150px auto;
+  text-align: left;
+  box-shadow: #2b4155 -3px -4px 113px 33px;
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  height: max-content;
+}
+.token---overlay--filter {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(20px);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.t--content-top {
+  position: relative;
+}
+.t--content-top .t--top--img {
+  position: absolute;
+  top: -150px;
+  right: -140px;
+}
+.t--content-top h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 55px;
+  line-height: normal;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 15px 0;
+}
+
+.t--content-bottom p {
+  font-family: "Exo 2", sans-serif;
+  color: #fff !important;
+  font-size: 24px;
+  text-align: left;
+  font-weight: 400;
+  margin: 12px 0 30px 0;
+}
+.t--content-bottom h3 {
+  font-family: "Jost", sans-serif;
+  color: #4ffdfe;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 34px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1400px) {
+  section.TokenUtility--page .container-fluid {
+    margin: 70px auto 30px auto;
+  }
+  .t--content-top .t--top--img img {
+    width: 300px;
+  }
+
+  .t--content-top .t--top--img {
+    top: -100px;
+    right: -100px;
+  }
+  .t--content-top h3 {
+    font-size: 40px;
+  }
+  .t--content-bottom h3 {
+    font-size: 18px;
+  }
+  .t--content-bottom p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .t--content-top .t--top--img img {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .t--content-top h3 {
+    font-size: 30px;
+  }
+  .t--content-bottom p {
+    font-size: 15px;
+    line-height: 24px;
+    margin: 8px 0 16px 0;
+  }
+  .t--content-bottom p br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .t--content-top .t--top--img img {
+    width: 150px;
+  }
+  .t--content-top .t--top--img {
+    top: -83px;
+    right: -69px;
+  }
+  section.TokenUtility--page .container-fluid {
+    height: max-content;
+    margin: auto;
+    width: 90%;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .t--content-top .t--top--img {
+    position: initial;
+  }
+  .t--content-top {
+    display: flex;
+    flex-direction: column;
+  }
+  section.TokenUtility--page .container-fluid {
+    padding: 30px;
+    overflow: scroll;
+    height: 90vh;
+    overflow-x: hidden;
+  }
+
+  .t--content-top h3 {
+    font-size: 25px;
+    order: 1;
+  }
+}

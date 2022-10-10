@@ -73,16 +73,15 @@
   display: none;
 }
 
-
-.slick-next,
+/* .slick-next,
 .slick-prev {
   width: 50px !important;
   height: 50px !important;
   border-radius: 50px !important;
   z-index: 1;
-  /* background-color: #292a38; */
-}
-.slick-next::before,
+
+} */
+/* .slick-next::before,
 .slick-prev::before {
   content: " ";
   background-image: url("../../assets/images/card-icon-1.png");
@@ -92,13 +91,12 @@
   display: block;
   top: -9px;
   left: -9px;
-}
-.slick-prev::before {
+} */
+/* .slick-prev::before {
   top: -9px;
   left: -9px;
   transform: rotate(180deg);
-}
-
+} */
 
 @media screen and (max-width: 767px) {
   .web_view {
@@ -121,6 +119,10 @@
   .section3 div {
     display: block;
   }
+  .section3 .slick-next::before,
+  .section3 .slick-prev::before {
+    content: " ";
+  }
 
   .section3item {
     width: 80% !important;
@@ -129,6 +131,20 @@
   }
   .section3::before {
     opacity: 0.5;
+    display: none;
+  }
+  .slick-dots li.slick-active button:before {
+    color: white;
+  }
+  .slick-dots li button:before {
+    font-size: 40px;
+  }
+  .slick-dots li button:before {
+    color: gray;
+  }
+  .slick-dots {
+    z-index: 1;
+    bottom: -30px;
   }
 }
 
@@ -145,16 +161,16 @@
   }
 }
 
-@media screen  and (max-width : 500px){
+@media screen and (max-width: 500px) {
   .section3item {
     width: 90% !important;
   }
   .slick-prev::before {
     top: 0;
     left: 0;
-}
-.slick-next::before{
-  right: 0;
-  top: 0;
-}
+  }
+  .slick-next::before {
+    right: 0;
+    top: 0;
+  }
 }

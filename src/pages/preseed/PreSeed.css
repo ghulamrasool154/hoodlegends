@@ -597,6 +597,10 @@ section.join_sale {
 }
 
 @media only screen and (max-width: 460px) {
+
+  .background_first_sale::before{
+    width: 300px;
+  }
   .left_top h5 {
     font-size: 20px;
   }

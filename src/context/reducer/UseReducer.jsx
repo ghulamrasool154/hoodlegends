@@ -3,6 +3,8 @@ import { useReducer, createContext } from "react";
 const initialState = {
   menuToggle: false,
   vallatPopoup: false,
+  teamPop: false,
+  utilesPop: false,
 };
 
 export const contentCreate = createContext();
@@ -17,6 +19,18 @@ const reducer = (state, action) => {
       return {
         ...state,
         vallatPopoup: !state.vallatPopoup,
+      };
+
+    case "TEAMPOPUP":
+      return {
+        ...state,
+        teamPop: !state.teamPop,
+      };
+
+    case "UTLISPOP":
+      return {
+        ...state,
+        utilesPop: !state.utilesPop,
       };
 
     default:

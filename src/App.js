@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { contentCreate } from "./context/reducer/UseReducer";
 function App() {
   const data = useContext(contentCreate);
-  // const positionFixed = data.state.menuToggle || data.state.vallatPopoup;
+  const positionFixed = data.state.menuToggle && data.state.teamPop;
 
   return (
     <div

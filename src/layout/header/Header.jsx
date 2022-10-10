@@ -8,12 +8,19 @@ import responsivemenuclose from "../../assets/images/responsive-colse.svg";
 const Header = () => {
   const [offset, setOffset] = useState(0);
   const data = useContext(contentCreate);
+  // const [urlchange, seturlchange] = useState("");
+  // const acb = document.querySelectorAll(".headerMenu a");
 
   useEffect(() => {
     const onScroll = () => setOffset(window.pageYOffset);
     // clean up code
     window.removeEventListener("scroll", onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
+    // seturlchange(window.location.href);
+
+    // for (let i = 0; i < acb.length; i++) {
+    //   acb[i].addEventListener("click", aabd);
+    // }
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -21,6 +28,7 @@ const Header = () => {
   const handleToggleMenu = () => {
     data.dispatch({ type: "TOGGLE" });
   };
+
   return (
     <>
       <header
@@ -49,16 +57,16 @@ const Header = () => {
                 INTRODUCTION <span className="spanlinebar"></span>
               </NavLink>
 
-              <NavLink to="pitch-deck" className="headerMenuSmallButton">
+              <NavLink to="/pitch-deck" className="headerMenuSmallButton">
                 PITCH DECK <span className="spanlinebar"></span>
               </NavLink>
 
-              <Link
-                to="pre-seed"
+              <NavLink
+                to="/pre-seed"
                 className="headerMenuBigButton headerMenuBigButton1"
               >
                 PRE-SEED SALE
-              </Link>
+              </NavLink>
               {/* <div
               to="connect-wallet"
               className="headerMenuBigButton headerMenuBigButton2"
@@ -117,7 +125,7 @@ const Header = () => {
           <ul>
             <li>
               <NavLink
-                to="introduction"
+                to="/"
                 className="headerMenuSmallButton headerMenuSmallButtonActive"
                 onClick={handleToggleMenu}
               >
@@ -134,13 +142,13 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="pre-seed"
                 className="headerMenuBigButton headerMenuBigButton1"
                 onClick={handleToggleMenu}
               >
                 PRE-SEED SALE
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

@@ -6,6 +6,7 @@ import binance from "../../assets/images/binance.png";
 import ProviderPopup from "../../components/Provider/ProviderPopup";
 import { contentCreate } from "../../context/reducer/UseReducer";
 import { Link } from "react-router-dom";
+import TokenUtility from "../../components/tokenutility/TokenUtility";
 const PreSeed = () => {
   const data = useContext(contentCreate);
   const hanldeProvider = () => {
@@ -15,11 +16,20 @@ const PreSeed = () => {
     });
     console.log(data.state.vallatPopoup);
   };
+
+  const hanldeUtilisPop = () => {
+    data.dispatch({
+      type: "UTLISPOP",
+    });
+    console.log(data.state.utilesPop);
+  };
   return (
     <>
       {data.state.vallatPopoup && (
         <ProviderPopup hanldeProvider={hanldeProvider} />
       )}
+
+      <TokenUtility hanldeUtilisPop={hanldeUtilisPop} />
       <section className="background_first_sale">
         <section className="join_sale">
           <div className="main_join_sale_wrapper">
@@ -28,7 +38,7 @@ const PreSeed = () => {
                 <h5>Join the first ever sale</h5>
               </div>
               <div className="right_top">
-                <button>get wishlisted</button>
+                {/* <button>get wishlisted</button> */}
               </div>
             </div>
             <div className="second_section_para">
@@ -74,8 +84,10 @@ const PreSeed = () => {
                   </div>
                 </div>
                 <div className="fourth_">
-                  <button className="connet_wallet" onClick={hanldeProvider}>
-                    Connect Wallet
+                  {/* <button className="connet_wallet" onClick={hanldeProvider}> */}
+                  <button className="connet_wallet">
+                    {/* Connect Wallet */}
+                    Coming Soon
                   </button>
                 </div>
               </div>
@@ -96,7 +108,7 @@ const PreSeed = () => {
                   </div>
                   <div className="utils">
                     <p>Utility</p>
-                    <button>Click Here</button>
+                    <button onClick={hanldeUtilisPop}>Click Here</button>
                   </div>
                   <div className="token_para">
                     <p>

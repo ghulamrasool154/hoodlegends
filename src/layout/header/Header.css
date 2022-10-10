@@ -100,10 +100,18 @@ header.newHeader.newHeaderTra .headerMenuSmallButton.active {
   margin-left: 45px;
   line-height: 44px;
   transition: 0.3s;
+  letter-spacing: 2px;
 }
 
 .headerMenuBigButton1:hover {
   background: linear-gradient(to right, #f88d95, #cf7295);
+}
+
+header.newHeader.newHeaderTra
+  a.headerMenuBigButton.headerMenuBigButton1.active {
+  background: linear-gradient(to right, #ed8d94, #c14472);
+  text-shadow: 0 0 10px #ffffff;
+  color: white;
 }
 
 .headerMenuBigButton2 {
@@ -145,7 +153,6 @@ header.newHeader.newHeaderTra .headerMenuSmallButton.active {
   transition: 0.3s;
 }
 
-
 /* .headerLogo {
   height: 90px;
   width: 180px;
@@ -178,7 +185,7 @@ header.newHeader.newHeaderTra .headerMenuSmallButton.active {
   transform: translateY(0);
   transform-origin: top;
   transition: 1s all;
-  background-color:#292c3935;
+  background-color: #292c3935;
 }
 
 .responsive--menu.hidden {
@@ -187,7 +194,6 @@ header.newHeader.newHeaderTra .headerMenuSmallButton.active {
   transform: translateY(-100vh);
   transform-origin: top;
   transition: 1s all;
-
 }
 
 .responsive--menu .header---section--top {
@@ -272,6 +278,32 @@ header.newHeader.newHeaderTra .headerMenuSmallButton.active {
     line-height: 50px;
     height: 50px;
   }
+  .mobile--resposive .headerMenuSmallButton.active .spanlinebar {
+    width: 100%;
+    height: 2px;
+    background: #4ffdfe;
+    display: inline-block;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+  }
+
+  .mobile--resposive .headerMenuBigButton1.active {
+    background: linear-gradient(to right, #ed8d94, #c14472);
+    text-shadow: 0 0 10px #ffffff;
+    color: white;
+  }
+  /* 
+  .header .headerMenuSmallButton.active {
+    text-decoration: underline;
+    text-decoration-color: #4ffdfe;
+    text-underline-offset: 9px;
+  }
+  header.newHeader.newHeaderTra .headerMenuSmallButton.active {
+    text-decoration: underline;
+    text-decoration-color: #4ffdfe;
+    text-underline-offset: 9px;
+  } */
 }
 
 /* @media screen and (max-width: 860px) {

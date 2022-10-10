@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Section04.css";
 import Slider from "react-slick";
+
 import t1 from "../../assets/images/t1.png";
 import t2 from "../../assets/images/t2.png";
 import t3 from "../../assets/images/t3.png";
@@ -10,6 +11,7 @@ import t6 from "../../assets/images/t6.png";
 import t7 from "../../assets/images/t7.png";
 import t8 from "../../assets/images/t8.png";
 import t9 from "../../assets/images/t9.png";
+import { contentCreate } from "../../context/reducer/UseReducer";
 const Section04 = () => {
   const names = [
     "Haris Hussain",
@@ -56,6 +58,15 @@ const Section04 = () => {
     "https://www.linkedin.com/in/leroyvalerie/",
   ];
 
+  const [isActive, setisActive] = useState(false);
+  const [isActive1, setisActive1] = useState(false);
+  const [isActive2, setIsActive2] = useState(false);
+  const [isActive3, setIsActive3] = useState(false);
+  const [isActive4, setIsActive4] = useState(false);
+  const [isActive5, setIsActive5] = useState(false);
+  const [isActive6, setIsActive6] = useState(false);
+  const [isActive7, setIsActive7] = useState(false);
+  const [isActive8, setIsActive8] = useState(false);
   const [tname, setTname] = useState("");
   const [forTalent, setForTalent] = useState(true);
   const [tlo, setTlo] = useState("");
@@ -73,50 +84,62 @@ const Section04 = () => {
 
     if (index === 0) {
       setTimg(t1);
+      setisActive(!isActive);
     }
 
     if (index === 1) {
       setTimg(t2);
+      setisActive1(!isActive1);
     }
 
     if (index === 2) {
       setTimg(t3);
+      setIsActive2(true);
     }
 
     if (index === 3) {
       setTimg(t4);
+      setIsActive3(true);
     }
 
     if (index === 4) {
       setTimg(t5);
+      setIsActive4(true);
     }
 
     if (index === 5) {
       setTimg(t6);
+      setIsActive5(true);
     }
 
     if (index === 6) {
       setTimg(t7);
+      setIsActive6(true);
     }
 
     if (index === 7) {
       setTimg(t8);
+      setIsActive7(true);
     }
     if (index === 8) {
       setTimg(t9);
+      setIsActive8(true);
     }
     setShowmodal(true);
   };
   const settings = {
     className: "center",
     dots: true,
-    centerMode: false,
+    centerMode: true,
+    arrows: true,
     infinite: true,
-    centerPadding: "60px",
+    centerPadding: "90px",
     slidesToShow: 1,
     speed: 500,
     rows: 1,
     slidesPerRow: 2,
+    nextArrow: <i className="fa-solid fa-caret-right"></i>,
+    prevArrow: <i class="fa-sharp fa-solid fa-caret-left"></i>,
     responsive: [
       {
         breakpoint: 768,
@@ -126,8 +149,41 @@ const Section04 = () => {
         },
       },
       {
+        breakpoint: 670,
+        settings: {
+          centerPadding: "70px",
+          slidesPerRow: 2,
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 590,
+        settings: {
+          centerPadding: "40px",
+          slidesPerRow: 2,
+          slidesToShow: 1,
+        },
+      },
+      {
         breakpoint: 530,
         settings: {
+          centerPadding: "90px",
+          slidesPerRow: 1,
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 440,
+        settings: {
+          centerPadding: "70px",
+          slidesPerRow: 1,
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          centerPadding: "55px",
           slidesPerRow: 1,
           slidesToShow: 1,
         },
@@ -146,7 +202,18 @@ const Section04 = () => {
                 className="teamOverlayModal"
               >
                 <div
-                  onClick={() => setShowmodal(false)}
+                  onClick={() => {
+                    setShowmodal(false);
+                    setisActive(false);
+                    setisActive1(false);
+                    setIsActive2(false);
+                    setIsActive3(false);
+                    setIsActive4(false);
+                    setIsActive5(false);
+                    setIsActive6(false);
+                    setIsActive7(false);
+                    setIsActive8(false);
+                  }}
                   className="teamOverlayModalCross"
                 >
                   <i class="fa-solid fa-x"></i>
@@ -184,8 +251,11 @@ const Section04 = () => {
               make Web 3.0 accessible to all.
             </div>
 
-            <div className="section4itemsWrapper web__view">
-              <div onClick={() => setTeam(0)} className="section4item">
+            <div className="section4itemsWrapper web__view ">
+              <div
+                onClick={() => setTeam(0)}
+                className={isActive ? "view1" : "section4item"}
+              >
                 <div className="section4itemImage section4itemImage1">
                   <img src={t1} />
                 </div>
@@ -193,7 +263,10 @@ const Section04 = () => {
                 <div className="section4itemHint">FOUNDER & CEO</div>
               </div>
 
-              <div onClick={() => setTeam(1)} className="section4item">
+              <div
+                onClick={() => setTeam(1)}
+                className={isActive1 ? "view2" : "section4item2"}
+              >
                 <div className="section4itemImage section4itemImage2">
                   <img src={t2} />
                 </div>
@@ -201,7 +274,10 @@ const Section04 = () => {
                 <div className="section4itemHint">CO-FOUNDER</div>
               </div>
 
-              <div onClick={() => setTeam(2)} className="section4item">
+              <div
+                onClick={() => setTeam(2)}
+                className={isActive2 ? "view3" : "section4item2"}
+              >
                 <div className="section4itemImage section4itemImage3">
                   <img src={t3} />
                 </div>
@@ -209,7 +285,10 @@ const Section04 = () => {
                 <div className="section4itemHint">CONCEPT DEVELOPER</div>
               </div>
 
-              <div onClick={() => setTeam(3)} className="section4item">
+              <div
+                onClick={() => setTeam(3)}
+                className={isActive3 ? "view4" : "section4item2"}
+              >
                 <div className="section4itemImage section4itemImage4">
                   <img src={t4} />
                 </div>
@@ -219,7 +298,10 @@ const Section04 = () => {
 
               <div className="teamSpacer"></div>
 
-              <div onClick={() => setTeam(4)} className="section4item">
+              <div
+                onClick={() => setTeam(4)}
+                className={isActive4 ? "view5" : "section4item"}
+              >
                 <div className="section4itemImage section4itemImage5">
                   <img src={t5} />
                 </div>
@@ -227,7 +309,10 @@ const Section04 = () => {
                 <div className="section4itemHint">ACCOUNTS & FINANCE</div>
               </div>
 
-              <div onClick={() => setTeam(5)} className="section4item">
+              <div
+                onClick={() => setTeam(5)}
+                className={isActive5 ? "view6" : "section4item"}
+              >
                 <div className="section4itemImage section4itemImage6">
                   <img src={t6} />
                 </div>
@@ -235,7 +320,10 @@ const Section04 = () => {
                 <div className="section4itemHint">COMMUNITY MANAGER</div>
               </div>
 
-              <div onClick={() => setTeam(6)} className="section4item">
+              <div
+                onClick={() => setTeam(6)}
+                className={isActive6 ? "view7" : "section4item"}
+              >
                 <div className="section4itemImage section4itemImage7">
                   <img src={t7} />
                 </div>
@@ -243,7 +331,10 @@ const Section04 = () => {
                 <div className="section4itemHint">PARTNERSHIP ADVISOR</div>
               </div>
 
-              <div onClick={() => setTeam(7)} className="section4item">
+              <div
+                onClick={() => setTeam(7)}
+                className={isActive7 ? "view8" : "section4item"}
+              >
                 <div className="section4itemImage section4itemImage8">
                   <img src={t8} />
                 </div>
@@ -251,7 +342,10 @@ const Section04 = () => {
                 <div className="section4itemHint">PARTNERSHIP ADVISOR</div>
               </div>
 
-              <div onClick={() => setTeam(8)} className="section4item">
+              <div
+                onClick={() => setTeam(8)}
+                className={isActive8 ? "view9" : "section4item"}
+              >
                 <div className="section4itemImage section4itemImage9">
                   <img src={t9} />
                 </div>
