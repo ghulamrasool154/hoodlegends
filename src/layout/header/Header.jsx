@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Header.css";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import logo from "../../assets/images/headerLogo.png";
 import { contentCreate } from "../../context/reducer/UseReducer";
 import responsivemenuicon from "../../assets/images/responsive-menu.svg";
 import responsivemenuclose from "../../assets/images/responsive-colse.svg";
 const Header = () => {
+  const location = useLocation();
   const [offset, setOffset] = useState(0);
   const data = useContext(contentCreate);
   // const [urlchange, seturlchange] = useState("");
@@ -50,12 +51,17 @@ const Header = () => {
               <img src={logo} alt="" />
             </Link>
             <div className="headerMenu">
-              <NavLink
+              <Link
                 to="/"
-                className="headerMenuSmallButton headerMenuSmallButtonActive"
+                className={
+                  location.pathname === "/"
+                    ? "headerMenuSmallButton active"
+                    : "headerMenuSmallButton"
+                }
+                // className="headerMenuSmallButton headerMenuSmallButtonActive"
               >
                 INTRODUCTION <span className="spanlinebar"></span>
-              </NavLink>
+              </Link>
 
               <NavLink to="/pitch-deck" className="headerMenuSmallButton">
                 PITCH DECK <span className="spanlinebar"></span>
@@ -103,14 +109,14 @@ const Header = () => {
         }
       >
         <div className="header---section--top">
-          <NavLink>
+          <Link>
             <img
               src={logo}
               alt=""
               className="logo--img"
               onClick={handleToggleMenu}
             />
-          </NavLink>
+          </Link>
           <div className="close--menu--button">
             <span>
               <img
@@ -124,13 +130,17 @@ const Header = () => {
         <div className="mobile--resposive">
           <ul>
             <li>
-              <NavLink
+              <Link
                 to="/"
-                className="headerMenuSmallButton headerMenuSmallButtonActive"
+                className={
+                  location.pathname === "/"
+                    ? "headerMenuSmallButton headerMenuSmallButtonActive active "
+                    : "headerMenuSmallButton headerMenuSmallButtonActive"
+                }
                 onClick={handleToggleMenu}
               >
                 INTRODUCTION <span className="spanlinebar"></span>
-              </NavLink>
+              </Link>
             </li>
             <li>
               <NavLink

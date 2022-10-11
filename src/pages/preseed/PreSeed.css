@@ -514,6 +514,7 @@ section.join_sale {
   .background_first_sale::before {
     top: 0px;
     height: 100% !important;
+    display: none;
   }
   .back_arrow {
     margin-bottom: 50px;

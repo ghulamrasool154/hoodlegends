@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import "./Section04.css";
 import Slider from "react-slick";
 
@@ -127,6 +127,8 @@ const Section04 = () => {
     }
     setShowmodal(true);
   };
+  const data = useContext(contentCreate);
+  // const [teamFixedToggle, setTeamFixedToggle] = useState(value.state.teamPop);
   const settings = {
     className: "center",
     dots: true,
@@ -191,6 +193,8 @@ const Section04 = () => {
     ],
   };
 
+  console.log(data.state.teamPop);
+
   return (
     <>
       {showModal ? (
@@ -213,6 +217,7 @@ const Section04 = () => {
                     setIsActive6(false);
                     setIsActive7(false);
                     setIsActive8(false);
+                    data.dispatch({ type: "TEAMPOPUP" });
                   }}
                   className="teamOverlayModalCross"
                 >
@@ -253,7 +258,10 @@ const Section04 = () => {
 
             <div className="section4itemsWrapper web__view ">
               <div
-                onClick={() => setTeam(0)}
+                onClick={() => {
+                  setTeam(0);
+                  data.dispatch({ type: "TEAMPOPUP" });
+                }}
                 className={isActive ? "view1" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage1">
