@@ -1,7 +1,7 @@
 .section6 {
   width: 100%;
   /* padding: 200px 0 100px 0; */
-  padding: 150px 0 80px 0;
+  padding: 100px 0 80px 0;
   background-image: url("../../assets/images/bottomBloom.png");
   background-size: contain;
   background-position: bottom;
@@ -53,12 +53,12 @@ a.section6item.gr--sec6item {
 }
 @media screen and (max-width: 1200px) {
   .section6 {
-    padding: 150px 0 100px 0;
+    padding: 100px 0 100px 0;
   }
 }
 @media screen and (max-width: 1010px) {
   .section6 {
-    padding: 100px 0 70px 0;
+    padding: 80px 0 70px 0;
   }
   .section6Icons-footer a {
     font-size: 35px;

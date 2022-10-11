@@ -135,7 +135,7 @@ const Section04 = () => {
     centerMode: true,
     arrows: true,
     infinite: true,
-    centerPadding: "90px",
+    centerPadding: "100px",
     slidesToShow: 1,
     speed: 500,
     rows: 1,
@@ -169,7 +169,15 @@ const Section04 = () => {
       {
         breakpoint: 530,
         settings: {
-          centerPadding: "90px",
+          centerPadding: "100px",
+          slidesPerRow: 1,
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          centerPadding: "80px",
           slidesPerRow: 1,
           slidesToShow: 1,
         },
@@ -185,7 +193,7 @@ const Section04 = () => {
       {
         breakpoint: 400,
         settings: {
-          centerPadding: "55px",
+          centerPadding: "75px",
           slidesPerRow: 1,
           slidesToShow: 1,
         },
@@ -272,7 +280,10 @@ const Section04 = () => {
               </div>
 
               <div
-                onClick={() => setTeam(1)}
+                onClick={() => {
+                  setTeam(1);
+                  data.dispatch({ type: "TEAMPOPUP" });
+                }}
                 className={isActive1 ? "view2" : "section4item2"}
               >
                 <div className="section4itemImage section4itemImage2">
@@ -283,7 +294,10 @@ const Section04 = () => {
               </div>
 
               <div
-                onClick={() => setTeam(2)}
+                onClick={() => {
+                  setTeam(2);
+                  data.dispatch({ type: "TEAMPOPUP" });
+                }}
                 className={isActive2 ? "view3" : "section4item2"}
               >
                 <div className="section4itemImage section4itemImage3">
@@ -294,7 +308,10 @@ const Section04 = () => {
               </div>
 
               <div
-                onClick={() => setTeam(3)}
+                onClick={() => {
+                  setTeam(3);
+                  data.dispatch({ type: "TEAMPOPUP" });
+                }}
                 className={isActive3 ? "view4" : "section4item2"}
               >
                 <div className="section4itemImage section4itemImage4">
@@ -307,7 +324,10 @@ const Section04 = () => {
               <div className="teamSpacer"></div>
 
               <div
-                onClick={() => setTeam(4)}
+                onClick={() => {
+                  setTeam(4);
+                  data.dispatch({ type: "TEAMPOPUP" });
+                }}
                 className={isActive4 ? "view5" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage5">
@@ -318,7 +338,10 @@ const Section04 = () => {
               </div>
 
               <div
-                onClick={() => setTeam(5)}
+                onClick={() => {
+                  setTeam(5);
+                  data.dispatch({ type: "TEAMPOPUP" });
+                }}
                 className={isActive5 ? "view6" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage6">
@@ -329,7 +352,10 @@ const Section04 = () => {
               </div>
 
               <div
-                onClick={() => setTeam(6)}
+                onClick={() => {
+                  setTeam(6);
+                  data.dispatch({ type: "TEAMPOPUP" });
+                }}
                 className={isActive6 ? "view7" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage7">
@@ -340,7 +366,10 @@ const Section04 = () => {
               </div>
 
               <div
-                onClick={() => setTeam(7)}
+                onClick={() => {
+                  setTeam(7);
+                  data.dispatch({ type: "TEAMPOPUP" });
+                }}
                 className={isActive7 ? "view8" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage8">
@@ -351,7 +380,10 @@ const Section04 = () => {
               </div>
 
               <div
-                onClick={() => setTeam(8)}
+                onClick={() => {
+                  setTeam(8);
+                  data.dispatch({ type: "TEAMPOPUP" });
+                }}
                 className={isActive8 ? "view9" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage9">

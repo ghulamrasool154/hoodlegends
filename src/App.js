@@ -15,11 +15,12 @@ function App() {
         position: data.state.menuToggle ? "fixed" : "",
       }}
     >
-      <Header />
+      {data.state.teamPop ? null : <Header />}
 
       <Routing />
 
-      <Footer />
+      {/* <Footer /> */}
+      {data.state.teamPop ? null : <Footer />}
     </div>
   );
 }
