@@ -73,10 +73,9 @@ a.section6item.gr--sec6item {
     font-size: 40px;
     font-style: normal;
   }
-  .section6Icons-footer a{
+  .section6Icons-footer a {
     font-size: 30px;
     margin: 0 20px;
-
   }
 }
 
@@ -84,7 +83,7 @@ a.section6item.gr--sec6item {
   .section6Icons-footer a {
     font-size: 20px;
     margin: 0 15px;
-}
+  }
   .section6title {
     font-size: 30px;
     line-height: normal;
@@ -94,7 +93,10 @@ a.section6item.gr--sec6item {
   }
   .section6Icons-footer {
     margin: 30px 0 30px 0;
-}
+
+    display: flex;
+    justify-content: space-between;
+  }
 }
 @media screen and (max-width: 500px) {
   .section6title {
@@ -102,7 +104,18 @@ a.section6item.gr--sec6item {
     line-height: normal;
     margin: 0;
   }
-  .copyright{
+  .copyright {
     line-height: 25px;
+  }
+  .section6Icons-footer a {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+
+  .section6Icons-footer a:first-child {
+    margin-left: 0;
+  }
+  .section6Icons-footer a:last-child {
+    margin-right: 0;
   }
 }
