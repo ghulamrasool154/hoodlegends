@@ -33,46 +33,55 @@
 .view1 {
   transform-origin: 50% 50% 0px;
   transform: translate3d(393.336px, -16.375px, 0px) scale(1.81008, 1.47852) !important;
+  transition: 0.5s;
 }
 
 .view2 {
   transform-origin: 50% 50% 0px;
   transform: translate3d(198.336px, 60.625px, 0px) scale(1.81008, 1.47852) !important;
+  transition: 0.5s;
 }
 
 .view3 {
   transform-origin: 50% 50% 0px;
   transform: translate3d(0, 162.625px, 0px) scale(1.81008, 1.47852) !important;
+  transition: 0.5s;
 }
 
 .view4 {
   transform-origin: 50% 50% 0px;
   transform: translate3d(0, 166.625px, 0px) scale(0.81008, 1.47852) !important;
+  transition: 0.5s;
 }
 
 .view5 {
   transform-origin: 50% 50% 0px;
   transform: translate3d(393.336px, -16.375px, 0px) scale(1.81008, 1.47852) !important;
+  transition: 0.5s;
 }
 
 .view6 {
   transform-origin: 50% 50% 0px;
   transform: translate3d(3px, -243.8364px, 0px) scale(0.87963, 0.947352);
+  transition: 0.5s;
 }
 
 .view7 {
   transform-origin: 50% 50% 0px;
   transform: translate3d(8px, -240.8364px, 0px) scale(0.87963, 0.947352);
+  transition: 0.5s;
 }
 
 .view8 {
   transform-origin: 50% 50% 0px;
   transform: translate3d(8px, -240.8364px, 0px) scale(0.87963, 0.947352);
+  transition: 0.5s;
 }
 
 .view9 {
   transform-origin: 50% 50% 0px;
   transform: translate3d(-188px, -240.8364px, 0px) scale(0.87963, 0.947352);
+  transition: 0.5s;
 }
 
 .section4item:hover {
@@ -138,7 +147,7 @@
   position: relative;
   z-index: 99999;
   width: 100%;
-  /* height: 100vh; */
+  /* / height: 100vh; / */
   left: 0;
   top: 0;
   animation: teamModal 0.3s ease-in;
@@ -281,6 +290,7 @@
   height: 100vh;
   position: fixed;
   background-color: #30324287;
+  backdrop-filter: blur(15px);
 }
 
 .teamOverlayModal div {
@@ -351,7 +361,7 @@
     width: 40px;
     height: 40px;
     background-size: contain;
-    /* transform: rotate(deg); */
+    /* / transform: rotate(deg); / */
   }
 
   .team_slider {

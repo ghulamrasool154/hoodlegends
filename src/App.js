@@ -6,7 +6,6 @@ import { useContext } from "react";
 import { contentCreate } from "./context/reducer/UseReducer";
 function App() {
   const data = useContext(contentCreate);
-  const positionFixed = data.state.menuToggle || data.state.teamPop;
 
   return (
     <div
@@ -15,12 +14,9 @@ function App() {
         position: data.state.menuToggle ? "fixed" : "",
       }}
     >
-      {data.state.teamPop ? null : <Header />}
-
+      <Header />
       <Routing />
-
-      {/* <Footer /> */}
-      {data.state.teamPop ? null : <Footer />}
+      <Footer />
     </div>
   );
 }

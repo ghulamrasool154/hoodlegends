@@ -6,6 +6,7 @@ import Section04 from "../../components/section4/Section04";
 import Section05 from "../../components/section5/Section05";
 import { contentCreate } from "../../context/reducer/UseReducer";
 
+import "./Home.css";
 const Home = () => {
   const data = useContext(contentCreate);
   useEffect(() => {
@@ -13,15 +14,11 @@ const Home = () => {
   }, []);
   return (
     <div className="home--page">
-      {data.state.teamPop ? null : (
-        <>
-          <Section01 />
-          <Section02 />
-          <Section03 />
-        </>
-      )}{" "}
+      <Section01 />
+      <Section02 />
+      <Section03 />
       <Section04 />
-      {data.state.teamPop ? null : <Section05 />}
+      <Section05 />
     </div>
   );
 };

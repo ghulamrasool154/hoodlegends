@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Section04.css";
 import Slider from "react-slick";
 
@@ -68,14 +68,14 @@ const Section04 = () => {
   const [isActive7, setIsActive7] = useState(false);
   const [isActive8, setIsActive8] = useState(false);
   const [tname, setTname] = useState("");
-  const [forTalent, setForTalent] = useState(true);
+  // const [forTalent, setForTalent] = useState(true);
   const [tlo, setTlo] = useState("");
   const [tdesc, setTdesk] = useState("");
-  const [JoinSalePop, setJoinSalePop] = useState(false);
+  // const [JoinSalePop, setJoinSalePop] = useState(false);
   const [showModal, setShowmodal] = useState(false);
   const [tImg, setTimg] = useState(t1);
   const [tlink, setTlink] = useState("");
-  const [path, setPath] = useState(0);
+  // const [path, setPath] = useState(0);
   const setTeam = (index) => {
     setTname(names[index]);
     setTlo(lo[index]);
@@ -126,7 +126,20 @@ const Section04 = () => {
       setIsActive8(true);
     }
     setShowmodal(true);
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   };
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showModal]);
+
   const data = useContext(contentCreate);
   // const [teamFixedToggle, setTeamFixedToggle] = useState(value.state.teamPop);
   const settings = {
@@ -201,8 +214,6 @@ const Section04 = () => {
     ],
   };
 
-  console.log(data.state.teamPop);
-
   return (
     <>
       {showModal ? (
@@ -225,14 +236,13 @@ const Section04 = () => {
                     setIsActive6(false);
                     setIsActive7(false);
                     setIsActive8(false);
-                    data.dispatch({ type: "TEAMPOPUP" });
                   }}
                   className="teamOverlayModalCross"
                 >
                   <i class="fa-solid fa-x"></i>
                 </div>
                 <div className="teamOverlayModalLeft">
-                  <img src={tImg} />
+                  <img alt="" src={tImg} />
                 </div>
                 <div className="teamOverlayModalRight">
                   <div className="teamOverlayModalRight1">{tname}</div>
@@ -242,6 +252,7 @@ const Section04 = () => {
                     target="_blank"
                     href={tlink}
                     className="teamOverlayModalRight4"
+                    rel="noopener noreferrer"
                   >
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
@@ -268,12 +279,11 @@ const Section04 = () => {
               <div
                 onClick={() => {
                   setTeam(0);
-                  data.dispatch({ type: "TEAMPOPUP" });
                 }}
                 className={isActive ? "view1" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage1">
-                  <img src={t1} />
+                  <img alt="" src={t1} />
                 </div>
                 <div className="section4itemName">HARIS HUSSAIN</div>
                 <div className="section4itemHint">FOUNDER & CEO</div>
@@ -282,12 +292,11 @@ const Section04 = () => {
               <div
                 onClick={() => {
                   setTeam(1);
-                  data.dispatch({ type: "TEAMPOPUP" });
                 }}
                 className={isActive1 ? "view2" : "section4item2"}
               >
                 <div className="section4itemImage section4itemImage2">
-                  <img src={t2} />
+                  <img alt="" src={t2} />
                 </div>
                 <div className="section4itemName">BABAR ALI</div>
                 <div className="section4itemHint">CO-FOUNDER</div>
@@ -296,12 +305,11 @@ const Section04 = () => {
               <div
                 onClick={() => {
                   setTeam(2);
-                  data.dispatch({ type: "TEAMPOPUP" });
                 }}
                 className={isActive2 ? "view3" : "section4item2"}
               >
                 <div className="section4itemImage section4itemImage3">
-                  <img src={t3} />
+                  <img alt="" src={t3} />
                 </div>
                 <div className="section4itemName">ASLIHAN SARIGÜL</div>
                 <div className="section4itemHint">CONCEPT DEVELOPER</div>
@@ -310,12 +318,11 @@ const Section04 = () => {
               <div
                 onClick={() => {
                   setTeam(3);
-                  data.dispatch({ type: "TEAMPOPUP" });
                 }}
                 className={isActive3 ? "view4" : "section4item2"}
               >
                 <div className="section4itemImage section4itemImage4">
-                  <img src={t4} />
+                  <img alt="" src={t4} />
                 </div>
                 <div className="section4itemName">DAVID TUNOLD</div>
                 <div className="section4itemHint">TALENT MANAGER</div>
@@ -326,12 +333,11 @@ const Section04 = () => {
               <div
                 onClick={() => {
                   setTeam(4);
-                  data.dispatch({ type: "TEAMPOPUP" });
                 }}
                 className={isActive4 ? "view5" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage5">
-                  <img src={t5} />
+                  <img alt="" src={t5} />
                 </div>
                 <div className="section4itemName">MOHSIN BASHIR</div>
                 <div className="section4itemHint">ACCOUNTS & FINANCE</div>
@@ -340,12 +346,11 @@ const Section04 = () => {
               <div
                 onClick={() => {
                   setTeam(5);
-                  data.dispatch({ type: "TEAMPOPUP" });
                 }}
                 className={isActive5 ? "view6" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage6">
-                  <img src={t6} />
+                  <img alt="" src={t6} />
                 </div>
                 <div className="section4itemName">JAMES OOI</div>
                 <div className="section4itemHint">COMMUNITY MANAGER</div>
@@ -354,12 +359,11 @@ const Section04 = () => {
               <div
                 onClick={() => {
                   setTeam(6);
-                  data.dispatch({ type: "TEAMPOPUP" });
                 }}
                 className={isActive6 ? "view7" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage7">
-                  <img src={t7} />
+                  <img alt="" src={t7} />
                 </div>
                 <div className="section4itemName">SHRUTI KOHLI</div>
                 <div className="section4itemHint">PARTNERSHIP ADVISOR</div>
@@ -368,12 +372,11 @@ const Section04 = () => {
               <div
                 onClick={() => {
                   setTeam(7);
-                  data.dispatch({ type: "TEAMPOPUP" });
                 }}
                 className={isActive7 ? "view8" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage8">
-                  <img src={t8} />
+                  <img alt="" src={t8} />
                 </div>
                 <div className="section4itemName">KARIN VERI</div>
                 <div className="section4itemHint">PARTNERSHIP ADVISOR</div>
@@ -382,12 +385,11 @@ const Section04 = () => {
               <div
                 onClick={() => {
                   setTeam(8);
-                  data.dispatch({ type: "TEAMPOPUP" });
                 }}
                 className={isActive8 ? "view9" : "section4item"}
               >
                 <div className="section4itemImage section4itemImage9">
-                  <img src={t9} />
+                  <img alt="" src={t9} />
                 </div>
                 <div className="section4itemName">VALERIE LEROY</div>
                 <div className="section4itemHint">BUSINESS ADVISOR</div>
@@ -400,64 +402,104 @@ const Section04 = () => {
         <div>
           <Slider {...settings}>
             <div className="inner_slider">
-              <div onClick={() => setTeam(0)} className="section4item">
+              <div
+                onClick={() => {
+                  setTeam(0);
+                }}
+                className="section4item"
+              >
                 <div className="section4itemImage section4itemImage1">
-                  <img src={t1} />
+                  <img alt="" src={t1} />
                 </div>
                 <div className="section4itemName">HARIS HUSSAIN</div>
                 <div className="section4itemHint">FOUNDER & CEO</div>
               </div>
-              <div onClick={() => setTeam(2)} className="section4item">
+              <div
+                onClick={() => {
+                  setTeam(2);
+                }}
+                className="section4item"
+              >
                 <div className="section4itemImage section4itemImage3">
-                  <img src={t3} />
+                  <img alt="" src={t3} />
                 </div>
                 <div className="section4itemName">ASLIHAN SARIGÜL</div>
                 <div className="section4itemHint">CONCEPT DEVELOPER</div>
               </div>
             </div>
             <div className="inner_slider">
-              <div onClick={() => setTeam(3)} className="section4item">
+              <div
+                onClick={() => {
+                  setTeam(3);
+                }}
+                className="section4item"
+              >
                 <div className="section4itemImage section4itemImage4">
-                  <img src={t4} />
+                  <img alt="" src={t4} />
                 </div>
                 <div className="section4itemName">DAVID TUNOLD</div>
                 <div className="section4itemHint">TALENT MANAGER</div>
               </div>
-              <div onClick={() => setTeam(4)} className="section4item">
+              <div
+                onClick={() => {
+                  setTeam(4);
+                }}
+                className="section4item"
+              >
                 <div className="section4itemImage section4itemImage5">
-                  <img src={t5} />
+                  <img alt="" src={t5} />
                 </div>
                 <div className="section4itemName">MOHSIN BASHIR</div>
                 <div className="section4itemHint">ACCOUNTS & FINANCE</div>
               </div>
             </div>
             <div className="inner_slider">
-              <div onClick={() => setTeam(5)} className="section4item">
+              <div
+                onClick={() => {
+                  setTeam(5);
+                }}
+                className="section4item"
+              >
                 <div className="section4itemImage section4itemImage6">
-                  <img src={t6} />
+                  <img alt="" src={t6} />
                 </div>
                 <div className="section4itemName">JAMES OOI</div>
                 <div className="section4itemHint">COMMUNITY MANAGER</div>
               </div>
-              <div onClick={() => setTeam(6)} className="section4item">
+              <div
+                onClick={() => {
+                  setTeam(6);
+                }}
+                className="section4item"
+              >
                 <div className="section4itemImage section4itemImage7">
-                  <img src={t7} />
+                  <img alt="" src={t7} />
                 </div>
                 <div className="section4itemName">SHRUTI KOHLI</div>
                 <div className="section4itemHint">PARTNERSHIP ADVISOR</div>
               </div>
             </div>
             <div className="inner_slider">
-              <div onClick={() => setTeam(7)} className="section4item">
+              <div
+                onClick={() => {
+                  setTeam(7);
+                }}
+                className="section4item"
+              >
                 <div className="section4itemImage section4itemImage8">
-                  <img src={t8} />
+                  <img alt="" src={t8} />
                 </div>
                 <div className="section4itemName">KARIN VERI</div>
                 <div className="section4itemHint">PARTNERSHIP ADVISOR</div>
               </div>
-              <div onClick={() => setTeam(8)} className="section4item">
+              <div
+                onClick={() => {
+                  setTeam(8);
+                }}
+                className="section4item"
+              >
                 <div className="section4itemImage section4itemImage9">
-                  <img src={t9} />
+                  <img alt="" src={t9} />
                 </div>
                 <div className="section4itemName">VALERIE LEROY</div>
                 <div className="section4itemHint">BUSINESS ADVISOR</div>
