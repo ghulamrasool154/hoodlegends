@@ -14,11 +14,11 @@ const Home = () => {
   }, []);
   return (
     <div className="home--page">
-      <Section01 />
-      <Section02 />
-      <Section03 />
+      {/* <Section01 /> */}
+      {/* <Section02 /> */}
+      {/* <Section03 /> */}
       <Section04 />
-      <Section05 />
+      {/* <Section05 /> */}
     </div>
   );
 };

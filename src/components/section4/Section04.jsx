@@ -182,7 +182,7 @@ const Section04 = () => {
       {
         breakpoint: 530,
         settings: {
-          centerPadding: "100px",
+          centerPadding: "120px",
           slidesPerRow: 1,
           slidesToShow: 1,
         },
@@ -190,7 +190,7 @@ const Section04 = () => {
       {
         breakpoint: 500,
         settings: {
-          centerPadding: "80px",
+          centerPadding: "100px",
           slidesPerRow: 1,
           slidesToShow: 1,
         },
@@ -198,7 +198,7 @@ const Section04 = () => {
       {
         breakpoint: 440,
         settings: {
-          centerPadding: "70px",
+          centerPadding: "80px",
           slidesPerRow: 1,
           slidesToShow: 1,
         },
@@ -216,52 +216,55 @@ const Section04 = () => {
 
   return (
     <>
-      {showModal ? (
-        <React.Fragment>
-          <div onClick={() => setShowmodal(false)} className="teamOverlay">
-            <div className="teamOverlayOuter">
+      {/* {showModal ? ( */}
+      <React.Fragment>
+        <div
+          onClick={() => setShowmodal(false)}
+          className={showModal ? " teamOverlay --grrr" : "teamOverlay"}
+        >
+          <div className="teamOverlayOuter">
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className="teamOverlayModal"
+            >
               <div
-                onClick={(e) => e.stopPropagation()}
-                className="teamOverlayModal"
+                onClick={() => {
+                  setShowmodal(false);
+                  setisActive(false);
+                  setisActive1(false);
+                  setIsActive2(false);
+                  setIsActive3(false);
+                  setIsActive4(false);
+                  setIsActive5(false);
+                  setIsActive6(false);
+                  setIsActive7(false);
+                  setIsActive8(false);
+                }}
+                className="teamOverlayModalCross"
               >
-                <div
-                  onClick={() => {
-                    setShowmodal(false);
-                    setisActive(false);
-                    setisActive1(false);
-                    setIsActive2(false);
-                    setIsActive3(false);
-                    setIsActive4(false);
-                    setIsActive5(false);
-                    setIsActive6(false);
-                    setIsActive7(false);
-                    setIsActive8(false);
-                  }}
-                  className="teamOverlayModalCross"
+                <i class="fa-solid fa-x"></i>
+              </div>
+              <div className="teamOverlayModalLeft">
+                <img alt="" src={tImg} />
+              </div>
+              <div className="teamOverlayModalRight">
+                <div className="teamOverlayModalRight1">{tname}</div>
+                <div className="teamOverlayModalRight2">{tlo}</div>
+                <div className="teamOverlayModalRight3">{tdesc}</div>
+                <a
+                  target="_blank"
+                  href={tlink}
+                  className="teamOverlayModalRight4"
+                  rel="noopener noreferrer"
                 >
-                  <i class="fa-solid fa-x"></i>
-                </div>
-                <div className="teamOverlayModalLeft">
-                  <img alt="" src={tImg} />
-                </div>
-                <div className="teamOverlayModalRight">
-                  <div className="teamOverlayModalRight1">{tname}</div>
-                  <div className="teamOverlayModalRight2">{tlo}</div>
-                  <div className="teamOverlayModalRight3">{tdesc}</div>
-                  <a
-                    target="_blank"
-                    href={tlink}
-                    className="teamOverlayModalRight4"
-                    rel="noopener noreferrer"
-                  >
-                    <i class="fa-brands fa-linkedin"></i>
-                  </a>
-                </div>
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
               </div>
             </div>
           </div>
-        </React.Fragment>
-      ) : null}
+        </div>
+      </React.Fragment>
+      {/* ) : null} */}
       <div
         className={showModal ? "bodyWrapper bodyWrapperBlured" : "bodyWrapper"}
       >
