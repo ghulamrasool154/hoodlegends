@@ -107,7 +107,7 @@ header.newHeader.newHeaderTra .headerMenuSmallButton.active {
   background: linear-gradient(to right, #f88d95, #cf7295);
 }
 
-header.newHeader.newHeaderTra
+header.newHeader
   a.headerMenuBigButton.headerMenuBigButton1.active {
   background: linear-gradient(to right, #ed8d94, #c14472);
   text-shadow: 0 0 10px #ffffff;

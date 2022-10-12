@@ -10,9 +10,9 @@ function App() {
   return (
     <div
       className="App"
-      style={{
-        position: data.state.menuToggle ? "fixed" : "",
-      }}
+      // style={{
+      //   overflow: data.state.menuToggle ? "hidden" : null,
+      // }}
     >
       <Header />
       <Routing />

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./PreSeed.css";
 import clock from "../../assets/images/icon_legend.png";
 import downarrow from "../../assets/images/icon_arrow.png";
@@ -23,6 +23,10 @@ const PreSeed = () => {
     });
     console.log(data.state.utilesPop);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {data.state.vallatPopoup && (

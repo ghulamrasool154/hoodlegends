@@ -27,9 +27,19 @@ const Header = () => {
   }, []);
 
   const handleToggleMenu = () => {
+    if (data.state.menuToggle) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
     data.dispatch({ type: "TOGGLE" });
   };
 
+  // useEffect(() => {
+  //   if (data.state.menuToggle) {
+  //     document.body.style.overflow = "hidden";
+  //   }
+  // }, []);
   return (
     <>
       <header
@@ -165,6 +175,6 @@ const Header = () => {
       </div>
     </>
   );
-};
+};;
 
 export default Header;
