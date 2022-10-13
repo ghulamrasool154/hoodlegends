@@ -5,6 +5,7 @@ import Section03 from "../../components/section3/Section03";
 import Section04 from "../../components/section4/Section04";
 import Section05 from "../../components/section5/Section05";
 import { contentCreate } from "../../context/reducer/UseReducer";
+import SectionTeam from "../../components/sectionTeam/SectionTeam";
 
 import "./Home.css";
 const Home = () => {
@@ -14,11 +15,12 @@ const Home = () => {
   }, []);
   return (
     <div className="home--page">
-      {/* <Section01 /> */}
-      {/* <Section02 /> */}
-      {/* <Section03 /> */}
-      <Section04 />
-      {/* <Section05 /> */}
+      <Section01 />
+      <Section02 />
+      <Section03 />
+      {/* <Section04 /> */}
+      <SectionTeam />
+      <Section05 />
     </div>
   );
 };
